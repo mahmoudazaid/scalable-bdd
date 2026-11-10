@@ -28,6 +28,15 @@ npx bddgen && npx playwright test --grep @onboarding
 
 Reports land in `playwright-report/` and `cucumber-report/`.
 
+## CI (GitHub Actions)
+
+Workflow: `.github/workflows/e2e.yml`
+
+- Runs on **push to `main`**
+- Also **manual**: Actions → E2E Tests → Run workflow
+
+Artifacts (kept 14 days): `playwright-report`, `cucumber-report`, `test-results`
+
 ## Coverage
 
 Onboarding start (register modal after "Open account"):
