@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run BDD Tests",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["test"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run BDD Tests by Tag",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "playwright",
+        "test",
+        "--pass-with-no-tests",
+        "--grep",
+        "${input:tagName}"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "preLaunchTask": "bddgen"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "tagName",
+      "type": "promptString",
+      "description": "Tag to filter (e.g. @smoke, @onboarding, @negative). Leave empty for all.",
+      "default": "@test"
+    }
+  ]
+}

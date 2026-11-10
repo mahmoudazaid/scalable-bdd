@@ -1,0 +1,28 @@
+{
+  "name": "scalable-bdd",
+  "version": "1.0.0",
+  "description": "Playwright + Cucumber BDD test framework for Scalable Capital",
+  "scripts": {
+    "test": "bddgen && playwright test --pass-with-no-tests",
+    "test:headed": "bddgen && playwright test --headed --pass-with-no-tests",
+    "test:ui": "bddgen && playwright test --ui",
+    "test:smoke": "bddgen && playwright test --grep @smoke --pass-with-no-tests",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "typescript",
+    "scalable-capital"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^20.10.0",
+    "dotenv": "^16.3.1",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^5.3.3"
+  }
+}

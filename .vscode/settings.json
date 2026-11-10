@@ -1,0 +1,17 @@
+{
+  "editor.codeLens": true,
+  "cucumber.features": [
+    "features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "src/steps/**/*.ts"
+  ],
+  "cucumber.command": "npx bddgen && npx playwright test --pass-with-no-tests",
+  "cucumber.options": "",
+  "cucumberTestExplorer.debug": false,
+  "cucumberautocomplete.steps": [
+    "src/steps/**/*.ts"
+  ],
+  "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+  "cucumberautocomplete.strictGherkinValidation": true
+}
